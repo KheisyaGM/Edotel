@@ -1,122 +1,253 @@
-🚀 tefa_myedotel
-A new Flutter project for TeFa MyEdotel.
+# 🚀 TeFa MyEdotel
 
-📑 Project Documentation
+A new Flutter project for **TeFa MyEdotel**.
+
+---
+
+# 📑 Project Documentation
+
 Untuk detail rencana pengembangan proyek ini, silakan cek:
 
-📄 Implementation Plan
-🛠️ Getting Started
-Project ini adalah starter untuk aplikasi Flutter.
+* 📄 **Implementation Plan**
 
-Referensi belajar Flutter:
+---
 
-https://docs.flutter.dev/get-started/learn-flutter
-https://docs.flutter.dev/get-started/codelab
-https://docs.flutter.dev/reference/learning-resources
-🔄 FLOW GIT (WAJIB DIPAHAMI)
-1️⃣ Clone Project (Pertama Kali)
+# 🛠️ Getting Started
+
+Project ini merupakan starter project untuk aplikasi Flutter.
+
+## 📚 Referensi Belajar Flutter
+
+* [https://docs.flutter.dev/get-started/learn-flutter](https://docs.flutter.dev/get-started/learn-flutter)
+* [https://docs.flutter.dev/get-started/codelab](https://docs.flutter.dev/get-started/codelab)
+* [https://docs.flutter.dev/reference/learning-resources](https://docs.flutter.dev/reference/learning-resources)
+
+---
+
+# 🔄 Git Flow (WAJIB DIPAHAMI)
+
+## 1️⃣ Clone Project (Pertama Kali)
+
+```bash
 git clone https://github.com/NauvalFaiz/TeFa_MyEdotel.git
 cd TeFa_MyEdotel
-2️⃣ Setup Branch
-Cek branch:
+```
 
+---
+
+## 2️⃣ Setup Branch
+
+Cek branch saat ini:
+
+```bash
 git branch
-Jika masih master, ubah ke main:
+```
 
+Jika masih menggunakan `master`, ubah menjadi `main`:
+
+```bash
 git branch -M main
-3️⃣ Push Pertama Kali
+```
+
+---
+
+## 3️⃣ Push Pertama Kali
+
+```bash
 git add .
 git commit -m "Initial commit"
 git push -u origin main
-4️⃣ Push Rutin (Update Kode)
+```
+
+---
+
+## 4️⃣ Push Update Kode
+
+```bash
 git add .
 git commit -m "Deskripsi perubahan"
 git push origin main
-5️⃣ Pull Update dari GitHub
+```
+
+---
+
+## 5️⃣ Pull Update dari GitHub
+
+```bash
 git pull origin main
-⚠️ ERROR YANG SERING TERJADI + SOLUSI
-❌ 1. error: failed to push some refs
-Penyebab: Repository GitHub sudah memiliki perubahan terbaru.
+```
 
-Solusi:
+---
 
+# ⚠️ Error yang Sering Terjadi + Solusi
+
+## ❌ 1. `error: failed to push some refs`
+
+### Penyebab
+
+Repository GitHub sudah memiliki perubahan terbaru.
+
+### Solusi
+
+```bash
 git pull origin main
 git push origin main
-Jika muncul editor (Vim):
+```
 
-tekan ESC
-ketik :wq
-Enter
-❌ 2. Permission denied (HTTPS / SSH)
-Penyebab: Autentikasi gagal
+Jika muncul editor **Vim**:
 
-🔐 Solusi HTTPS
-Gunakan Personal Access Token (PAT) Bukan password GitHub
+1. Tekan `ESC`
+2. Ketik:
 
-Buat di: https://github.com/settings/tokens
+```bash
+:wq
+```
 
-🔐 Solusi SSH (Rekomendasi)
-Cek koneksi:
+3. Tekan `Enter`
 
+---
+
+## ❌ 2. `Permission denied (HTTPS / SSH)`
+
+### Penyebab
+
+Autentikasi gagal.
+
+---
+
+### 🔐 Solusi HTTPS
+
+Gunakan **Personal Access Token (PAT)**, bukan password GitHub.
+
+Buat PAT di:
+
+[https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+---
+
+### 🔐 Solusi SSH (Rekomendasi)
+
+Cek koneksi SSH:
+
+```bash
 ssh -T git@github.com
-Jika belum ada SSH key:
+```
 
+Jika belum memiliki SSH key:
+
+```bash
 ssh-keygen -t ed25519 -C "email@example.com"
-Tambahkan ke GitHub: Settings → SSH and GPG Keys
+```
 
-❌ 3. src refspec main does not match any
-Penyebab: Belum commit
+Tambahkan SSH key ke GitHub melalui:
 
-Solusi:
+`Settings → SSH and GPG Keys`
 
+---
+
+## ❌ 3. `src refspec main does not match any`
+
+### Penyebab
+
+Belum melakukan commit.
+
+### Solusi
+
+```bash
 git add .
-git commit -m "initial commit"
+git commit -m "Initial commit"
 git push origin main
-❌ 4. remote origin already exists
-Penyebab: Remote sudah ada
+```
 
-Solusi:
+---
 
+## ❌ 4. `remote origin already exists`
+
+### Penyebab
+
+Remote repository sudah ada sebelumnya.
+
+### Solusi
+
+```bash
 git remote set-url origin https://github.com/NauvalFaiz/TeFa_MyEdotel.git
-❌ 5. File > 100MB (Limit GitHub)
-Pesan:
+```
 
+---
+
+## ❌ 5. File > 100MB (Limit GitHub)
+
+### Pesan Error
+
+```bash
 File is 120MB; exceeds GitHub limit
-✔️ Solusi 1 (Disarankan)
-Gunakan .gitignore
+```
+
+---
+
+### ✔️ Solusi 1 (Disarankan)
+
+Gunakan `.gitignore`.
 
 Contoh:
 
+```gitignore
 *.zip
 *.mp4
 *.apk
 /build/
-✔️ Solusi 2 (Jika wajib upload file besar)
-Gunakan Git LFS:
+```
 
-Install: https://git-lfs.com/
+---
 
+### ✔️ Solusi 2 (Jika Wajib Upload File Besar)
+
+Gunakan **Git LFS**.
+
+Install Git LFS:
+
+[https://git-lfs.com/](https://git-lfs.com/)
+
+```bash
 git lfs install
 git lfs track "*.zip"
 git add .gitattributes
 git add .
 git commit -m "Add large files with LFS"
 git push
-💻 CATATAN PENTING
-✔ Bisa dijalankan di:
+```
 
-Git Bash
-CMD
-PowerShell
-Terminal Linux / macOS
-✔ Pastikan sudah install:
+---
 
-Git → https://git-scm.com/
-Flutter → https://docs.flutter.dev/get-started/install
-🔥 BEST PRACTICE
-Selalu git pull sebelum git push
-Gunakan pesan commit yang jelas
-Jangan upload file besar sembarangan
-Gunakan .gitignore dari awal
-📌 Repository
+# 💻 Catatan Penting
+
+## ✔️ Terminal yang Bisa Digunakan
+
+* Git Bash
+* CMD
+* PowerShell
+* Terminal Linux / macOS
+
+---
+
+## ✔️ Pastikan Sudah Install
+
+* Git → [https://git-scm.com/](https://git-scm.com/)
+* Flutter → [https://docs.flutter.dev/get-started/install](https://docs.flutter.dev/get-started/install)
+
+---
+
+# 🔥 Best Practice
+
+* Selalu lakukan `git pull` sebelum `git push`
+* Gunakan pesan commit yang jelas
+* Jangan upload file besar sembarangan
+* Gunakan `.gitignore` sejak awal project
+
+---
+
+# 📌 Repository
+
+```bash
 https://github.com/NauvalFaiz/TeFa_MyEdotel.git
+```
